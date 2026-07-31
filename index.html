@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sening uchun maxsus ❤️ | Animated Love Heart</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background glow elements -->
+    <div class="bg-glow" id="glow1"></div>
+    <div class="bg-glow" id="glow2"></div>
+
+    <!-- Main Canvas for Heart Particles -->
+    <canvas id="heartCanvas"></canvas>
+
+    <!-- Content overlay -->
+    <main class="main-container">
+        <!-- Floating central text -->
+        <div class="love-card">
+            <h1 class="love-title">I Love You <span id="targetLetter" class="glowing-letter">R</span></h1>
+        </div>
+    </main>
+
+    <!-- Side Control Panel (Glassmorphic) -->
+    <div class="control-panel" id="controlPanel">
+        <button class="toggle-btn" id="togglePanelBtn" aria-label="Sozlamalarni ochish">
+            <span class="gear-icon">⚙️</span>
+        </button>
+        <div class="panel-content">
+            <h3>Boshqaruv Paneli</h3>
+            
+            <div class="control-group">
+                <label for="nameInput">Ism yoki Harf:</label>
+                <input type="text" id="nameInput" value="R" maxlength="15" placeholder="Ism yozing...">
+            </div>
+
+            <div class="control-group">
+                <label for="themeSelect">Rang Mavzusi:</label>
+                <select id="themeSelect">
+                    <option value="rose">Neon Rose ❤️</option>
+                    <option value="violet">Cosmic Violet 💜</option>
+                    <option value="gold">Sunset Gold 💛</option>
+                    <option value="emerald">Mint Emerald 💚</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="templateSelect">Animatsiya Turi (Shablon):</label>
+                <select id="templateSelect">
+                    <option value="particle">Zarrachalar to'plami (3D Shell) ✨</option>
+                    <option value="ribbon">Silliq lentalar (Neon Ribbon) 🎗️</option>
+                    <option value="burst">Yulduzli portlash (Heart Burst) 🎆</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Aylanish tezligi: <span id="speedVal">1.0x</span></label>
+                <input type="range" id="speedSlider" min="0" max="3" step="0.1" value="1">
+            </div>
+
+            <div class="control-group">
+                <label>Urib turish (Pulse) tezligi: <span id="pulseVal">1.0x</span></label>
+                <input type="range" id="pulseSlider" min="0.2" max="2.5" step="0.1" value="1">
+            </div>
+
+            <div class="control-group">
+                <label>Zarrachalar soni: <span id="countVal">1200</span></label>
+                <input type="range" id="countSlider" min="500" max="3000" step="100" value="1200">
+            </div>
+
+            <div class="control-group music-group">
+                <label>Musiqa va Tovushlar:</label>
+                <button id="musicToggleBtn" class="music-btn">
+                    <span class="music-icon">🎵</span> Yoqish
+                </button>
+            </div>
+            
+            <div class="footer-note">
+                Sening uchun mehr bilan yaratildi ✨
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden audio element for romantic background synth pad/ambience -->
+    <!-- We will use a generated synthesized web audio context in script.js to avoid loading external mp3 files -->
+    
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
